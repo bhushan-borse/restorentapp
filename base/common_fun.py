@@ -1,3 +1,4 @@
 from bson import ObjectId
 
-get_uuid = lambda : str(ObjectId())
+
+def get_uuid(): return str(ObjectId())
