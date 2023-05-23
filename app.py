@@ -4,8 +4,6 @@ from database.connect_to_mongo import init_mongo_db
 
 app = Flask(__name__)
 
-# app.config['MONGO_URI'] = "mongodb+srv://localhost:27012/restorent"
-
 app.config["MONGODB_SETTINGS"] = [
     {
         "db": "restorent",

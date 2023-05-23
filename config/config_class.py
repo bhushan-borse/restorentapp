@@ -1,6 +1,7 @@
 class ViewConfig(object):
     def __init__(
             self, model=None,
+            get_obj_key=None,
             get_before_db_call=None, get_after_before_db_call=None,
             put_before_db_call=None, put_after_before_db_call=None,
             post_before_db_call=None, post_after_before_db_call=None,
@@ -9,6 +10,7 @@ class ViewConfig(object):
     ):
         # Model is the table name
         self.model = model
+        self.get_obj_key = get_obj_key
 
         # if there is a extra process want to do after or before db-call then give the function name.
         # based on given conf it will invoke the given fun
