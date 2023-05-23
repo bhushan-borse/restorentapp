@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "dc39b56d-0c4d-4739-a7ef-1080575f48be",
+		"name": "Restorent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getTableObj",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9000/table"
+			},
+			"response": [
+				{
+					"name": "getTable",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9000/table"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "210"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.1 Python/3.8.10"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 May 2023 05:49:35 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"_id\": \"646c53e9c1b5976b52918c88\",\n            \"table_code\": 1,\n            \"table_number\": \"Table1\"\n        }\n    ],\n    \"error\": null,\n    \"message\": \"Success!.\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "AddTable",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"table_code\": \"001\",\n    \"table_number\": \"Table1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9000/table"
+			},
+			"response": [
+				{
+					"name": "AddTable",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"table_code\": \"001\",\n    \"table_number\": \"Table1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9000/table"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "116"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.1 Python/3.8.10"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 May 2023 05:49:29 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": null,\n    \"error\": null,\n    \"message\": \"Data Successfully Save!..\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "getTableObj",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/table?tabel_management_id=646c58a1a686c259bd0e41ff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"table"
+					],
+					"query": [
+						{
+							"key": "tabel_management_id",
+							"value": "646c58a1a686c259bd0e41ff"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getTableObj",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/table?tabel_management_id=646c53e9c1b5976b52918c88",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"table"
+							],
+							"query": [
+								{
+									"key": "tabel_management_id",
+									"value": "646c53e9c1b5976b52918c88"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "192"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.1 Python/3.8.10"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 May 2023 06:08:49 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"_id\": \"646c53e9c1b5976b52918c88\",\n        \"table_code\": 1,\n        \"table_number\": \"Table1\"\n    },\n    \"error\": null,\n    \"message\": \"Success!.\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "DeleteData",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/table?tabel_management_id=646c53e9c1b5976b52918c88",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"table"
+					],
+					"query": [
+						{
+							"key": "tabel_management_id",
+							"value": "646c53e9c1b5976b52918c88"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DeleteData",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/table?tabel_management_id=646c53e9c1b5976b52918c88",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"table"
+							],
+							"query": [
+								{
+									"key": "tabel_management_id",
+									"value": "646c53e9c1b5976b52918c88"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "100"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.1 Python/3.8.10"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 May 2023 06:09:30 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": null,\n    \"error\": null,\n    \"message\": \"Success!.\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"table_number\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/table?tabel_management_id=646c58a1a686c259bd0e41ff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"table"
+					],
+					"query": [
+						{
+							"key": "tabel_management_id",
+							"value": "646c58a1a686c259bd0e41ff"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"table_number\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/table?tabel_management_id=646c58a1a686c259bd0e41ff",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"table"
+							],
+							"query": [
+								{
+									"key": "tabel_management_id",
+									"value": "646c58a1a686c259bd0e41ff"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "100"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.1 Python/3.8.10"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 May 2023 06:14:10 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": null,\n    \"error\": null,\n    \"message\": \"Success!.\",\n    \"success\": true\n}"
+				}
+			]
+		}
+	]
+}
