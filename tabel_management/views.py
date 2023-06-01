@@ -20,7 +20,6 @@ def get_api_view():
                 get_obj_key="tabel_management_id"
             ),
             methods=['GET', 'POST', 'PUT', 'DELETE'],
-
         )
     ]
     return view_list
