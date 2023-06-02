@@ -9,7 +9,7 @@ CORS(app, origins=["*"])
 app.config["MONGODB_SETTINGS"] = [
     {
         "db": "restorent",
-        "host": "mongodb+srv://borsebhushan216:qpcwjRzxzzR1DgWv@restapp.xyjt4qm.mongodb.net/?retryWrites=true&w=majority",
+        "host": "localhost",
         "port": 27017,
     }
 ]
